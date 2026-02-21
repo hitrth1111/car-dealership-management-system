@@ -1,0 +1,575 @@
+/* General Styles - Improved */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font stack */
+    line-height: 1.7;
+    color: #2d3436;
+    background-color: #f7f9fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Improved Link Styling */
+a {
+    text-decoration: none;
+    color: #2d3436;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #3498db;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Enhanced Button Styling */
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(41, 128, 185, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Header - Improved */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: #3498db;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Improved Navigation */
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Banner Section - Enhanced */
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+    margin-bottom: 60px;
+}
+
+.banner h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.banner p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+/* Featured Cars Section - Improved */
+.featured-cars {
+    padding: 60px 0;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.03);
+}
+
+.featured-cars h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #2d3436;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.featured-cars h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #3498db;
+}
+
+/* Car Grid Improvements */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.car-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.car-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover img {
+    transform: scale(1.05);
+}
+
+.car-card h3 {
+    padding: 20px 20px 10px 20px;
+    font-size: 22px;
+    color: #2d3436;
+}
+
+.car-card .price {
+    color: #3498db;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0 20px 15px 20px;
+}
+
+.car-card .btn {
+    display: block;
+    margin: 0 20px 20px 20px;
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* About Us Section - Enhanced */
+.about-us {
+    padding: 80px 0;
+    background-color: #f7f9fa;
+    text-align: center;
+    background-image: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.about-us h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #2d3436;
+    position: relative;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.about-us h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #3498db;
+}
+
+.about-us p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Footer - Improved */
+footer {
+    background-color: #2d3436;
+    color: #f7f9fa;
+    padding: 60px 0 30px;
+    position: relative;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    color: #3498db;
+    font-size: 22px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #3498db;
+}
+
+.footer-section p, .footer-section li {
+    margin-bottom: 10px;
+    opacity: 0.85;
+}
+
+.footer-section a {
+    color: #f7f9fa;
+    transition: all 0.2s ease;
+}
+
+.footer-section a:hover {
+    color: #3498db;
+    padding-left: 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Form Styles - Enhanced */
+.form-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #2d3436;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.form-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #3498db;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.success-message {
+    color: #2ecc71;
+    padding: 15px;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Inventory Page - Improved */
+.filter-section {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.filter-section h3 {
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+.filter-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.filter-form .form-group {
+    margin-bottom: 0;
+}
+
+/* Car Details Page - Enhanced */
+.car-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.car-images {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.car-images img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.car-images:hover img {
+    transform: scale(1.03);
+}
+
+.car-info h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #2d3436;
+}
+
+.car-info .price {
+    color: #3498db;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.car-specs {
+    margin: 30px 0;
+    background: #f7f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.car-specs li {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-specs li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.car-specs span:first-child {
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.car-specs span:last-child {
+    color: #3498db;
+}
+
+.car-description {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Responsive Design - Enhanced */
+@media (max-width: 992px) {
+    .banner h2 {
+        font-size: 40px;
+    }
+    
+    .car-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 12px;
+    }
+    
+    .banner {
+        padding: 100px 0;
+    }
+    
+    .banner h2 {
+        font-size: 36px;
+    }
+    
+    .banner p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .logo h1 {
+        font-size: 24px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul li {
+        margin: 8px 0;
+    }
+    
+    .banner h2 {
+        font-size: 30px;
+    }
+    
+    .banner p {
+        font-size: 16px;
+    }
+    
+    .featured-cars h2, 
+    .about-us h2 {
+        font-size: 28px;
+    }
+    
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+}
